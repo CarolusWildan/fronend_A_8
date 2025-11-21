@@ -1,26 +1,26 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ImageCarousel from "../components/ImageCarousel";
-import imgFeaturette1 from "../assets/images/featurette-1.jpg";
-import imgFeaturette2 from "../assets/images/featurette-2.jpg";
-import imgBakery1 from "../assets/images/bakery1.jpeg";
-import imgBakery2 from "../assets/images/bakery2.jpeg";
-import imgBakery3 from "../assets/images/bakery3.jpeg";
+import imgFeaturette1 from "../assets/images/feat1.jpg";
+import imgFeaturette2 from "../assets/images/feat2.jpg";
+import imgCinema1 from "../assets/images/cinema1.jpeg";
+import imgCinema2 from "../assets/images/cinema2.jpeg";
+import imgCinema3 from "../assets/images/cinema3.jpeg";
 
 const images = [
     {
-        img: imgBakery1,
-        title: "First slide label",
-        description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+        img: imgCinema1,
+        title: "Now Showing",
+        description: "Nikmati pengalaman menonton film terbaru dengan kualitas terbaik.",
     },
     {
-        img: imgBakery2,
-        title: "Second slide label",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        img: imgCinema2,
+        title: "Coming Soon",
+        description: "Film-film blockbuster yang akan segera hadir untuk Anda.",
     },
     {
-        img: imgBakery3,
-        title: "Third slide label",
-        description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+        img: imgCinema3,
+        title: "Exclusive Premiere",
+        description: "Tonton lebih dulu sebelum yang lain hanya di bioskop kami.",
     },
 ];
 
@@ -28,96 +28,98 @@ const HomePage = () => {
     return (
         <>
             <ImageCarousel images={images} />
+
             <Container className="mt-5">
                 <Row>
                     <Col md={7}>
                         <h2 className="fw-normal">
-                            Bakery pertama dan satu-satunya <strong>yang fiksional</strong>.
+                            Bioskop modern dengan teknologi <strong>Ultra-HD & Dolby Atmos</strong>.
                         </h2>
                         <p className="lead">
-                            Diciptakan oleh <strong>[Nama Lengkap]</strong>, Mahasiswa Universitas Atma Jaya Yogyakarta dari program studi Informatika.
-                        </p>
-                        <p className="lead">
-                            Nomor Pokok Mahasiswa: <strong>[NPM]</strong>.
+                            Dikelola oleh <strong>[Kelompok 8]</strong>,
+                            Mahasiswa Universitas Atma Jaya Yogyakarta program studi Informatika.
                         </p>
                     </Col>
                     <Col md={5}>
                         <img
-                            src={imgFeaturette1} className="img-fluid mx-auto rounded shadow" role="img" aria-label="Gambar featurette 1"
+                            src={imgFeaturette1}
+                            className="img-fluid mx-auto rounded shadow"
+                            role="img"
+                            aria-label="Gambar featurette bioskop"
                         />
                     </Col>
                 </Row>
 
-                {/* Tambahan Card Kanan-Kiri */}
+                {/* Card Kanan-Kiri */}
                 <Row className="mt-5">
                     <Col md={5}>
                         <img
-                            src={imgBakery1}
+                            src={imgCinema1}
                             className="img-fluid mx-auto rounded shadow"
-                            alt="Bakery 1"
+                            alt="Cinema Hall"
                         />
                     </Col>
                     <Col md={7}>
-                        <h3><strong>Your taste bud is key, experience the heartbeat of our bakery.</strong></h3>
+                        <h3><strong>Rasakan sensasi menonton yang imersif.</strong></h3>
                         <p className="lead">
-                            Our modern, sophisticated bakery items are designed to exceed expectations with premium taste, 
-                            quality where you need it, and thoughtful attention to detail.
+                            Dengan layar besar dan kualitas suara canggih, setiap detik film menjadi pengalaman
+                            yang hidup dan tak terlupakan.
                         </p>
                     </Col>
                 </Row>
+
                 <Row className="mt-5">
                     <Col md={7}>
-                        <h3>Your taste bud is key, experience the heartbeat of our bakery.</h3>
+                        <h3>Film terbaik, kenyamanan terbaik.</h3>
                         <p className="lead">
-                            Our modern, sophisticated bakery items are designed to exceed expectations with premium taste, 
-                            quality where you need it, and thoughtful attention to detail.
+                            Kursi empuk, ruang teater luas, dan suasana eksklusif
+                            memastikan Anda menikmati film dengan maksimal.
                         </p>
                     </Col>
                     <Col md={5}>
                         <img
-                            src={imgBakery2}
+                            src={imgCinema2}
                             className="img-fluid mx-auto rounded shadow"
-                            alt="Bakery 2"
+                            alt="Cinema Seats"
                         />
                     </Col>
                 </Row>
-                {/* Akhir Tambahan Card */}
-                
+
+                {/* Tambahan Card 2 */}
                 <Row className="mt-5 mb-5" />
                 <Row className="mt-5">
                     <Col md={5}>
                         <img
-                            src={imgBakery1}
+                            src={imgCinema3}
                             className="img-fluid mx-auto rounded shadow"
-                            alt="Bakery 1"
+                            alt="Movie Poster"
                         />
                     </Col>
                     <Col md={7}>
-                        <h3>Your taste bud is key, experience the heartbeat of our bakery.</h3>
+                        <h3>Pilihan film terlengkap untuk semua genre.</h3>
                         <p className="lead">
-                            Our modern, sophisticated bakery items are designed to exceed expectations with premium taste, 
-                            quality where you need it, and thoughtful attention to detail.
+                            Dari action, romance, horror, hingga anime. Pilih film favoritmu dan nikmati tanpa batas.
                         </p>
                     </Col>
                 </Row>
+
                 <Row className="mt-5">
                     <Col md={7}>
-                        <h3>Your taste bud is key, experience the heartbeat of our bakery.</h3>
+                        <h3>Promo menarik setiap minggu!</h3>
                         <p className="lead">
-                            Our modern, sophisticated bakery items are designed to exceed expectations with premium taste, 
-                            quality where you need it, and thoughtful attention to detail.
+                            Dapatkan diskon tiket, paket popcorn, dan penawaran eksklusif lainnya
+                            hanya di bioskop kami.
                         </p>
                     </Col>
                     <Col md={5}>
                         <img
-                            src={imgBakery2}
+                            src={imgCinema2}
                             className="img-fluid mx-auto rounded shadow"
-                            alt="Bakery 2"
+                            alt="Cinema Promo"
                         />
                     </Col>
                 </Row>
-                {/* Akhir Tambahan Card */}
-                
+
                 <Row className="mt-5 mb-5" />
             </Container>
         </>
