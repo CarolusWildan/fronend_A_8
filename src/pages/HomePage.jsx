@@ -1,65 +1,124 @@
 import { Container, Row, Col } from "react-bootstrap";
-import imgFilm1 from "../assets/images/GoodBoy.png";
-import imgFilm2 from "../assets/images/GoodFortune.png";
-import imgFilm3 from "../assets/images/TukarTakdir.png";
+import ImageCarousel from "../components/ImageCarousel";
+import imgFeaturette1 from "../assets/images/feat1.jpg";
+import imgFeaturette2 from "../assets/images/feat2.jpg";
+import imgCinema1 from "../assets/images/bioskop1.jpeg";
+import imgCinema2 from "../assets/images/bioskop2.jpeg";
+import imgCinema3 from "../assets/images/bioskop3.jpeg";
 
-const FilmPage = () => {
+const images = [
+    {
+        img: imgCinema1,
+        title: "Now Showing",
+        description: "Nikmati pengalaman menonton film terbaru dengan kualitas terbaik.",
+    },
+    {
+        img: imgCinema2,
+        title: "Coming Soon",
+        description: "Film-film block-buster yang akan segera hadir untuk Anda.",
+    },
+];
+
+const HomePage = () => {
     return (
         <>
+            <ImageCarousel images={images} />
+
             <Container className="mt-5">
-                {/* Tambahan Card Kanan-Kiri */}
-                <Row className="mt-5">
-                    <Col md={5}>
-                        <img
-                            src={imgFilm1}
-                            className="img-fluid mx-auto rounded shadow"
-                            alt="Bakery 1"
-                        />
-                    </Col>
+                <Row>
                     <Col md={7}>
-                        <h1><strong>GOOD BOY</strong></h1>
+                        <h2 className="fw-normal">
+                            Bioskop modern dengan teknologi <strong>Ultra-HD & Dolby Atmos</strong>.
+                        </h2>
                         <p className="lead">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            Dikelola oleh <strong>[Kelompok 8]</strong>,
+                            Mahasiswa Universitas Atma Jaya Yogyakarta program studi Informatika.
                         </p>
                     </Col>
+                    <Col md={5}>
+                        <img
+                            src={imgFeaturette1}
+                            className="img-fluid mx-auto rounded shadow"
+                            role="img"
+                            aria-label="Gambar featurette bioskop"
+                        />
+                    </Col>
                 </Row>
+
+                {/* Card Kanan-Kiri */}
                 <Row className="mt-5">
                     <Col md={5}>
                         <img
-                            src={imgFilm2}
+                            src={imgCinema1}
                             className="img-fluid mx-auto rounded shadow"
-                            alt="Bakery 1"
+                            alt="Cinema Hall"
                         />
                     </Col>
                     <Col md={7}>
-                        <h1><strong>GOOD FORTUNE</strong></h1>
+                        <h3><strong>Rasakan sensasi menonton yang imersif.</strong></h3>
                         <p className="lead">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </Col>
-                </Row>
-                <Row className="mt-5">
-                    <Col md={5}>
-                        <img
-                            src={imgFilm3}
-                            className="img-fluid mx-auto rounded shadow"
-                            alt="Bakery 1"
-                        />
-                    </Col>
-                    <Col md={7}>
-                        <h1><strong>TUKAR TAKDIR</strong></h1>
-                        <p className="lead">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi esse distinctio placeat ipsum sapiente modi ad expedita qui, natus unde hic exercitationem facere fugiat nesciunt iste eaque, eveniet odio libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias hic velit earum. Necessitatibus aperiam optio inventore quas sint commodi, voluptas aliquam maiores! Facere praesentium eaque odit sint. Ducimus, culpa fugiat Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis molestiae vitae eius eveniet magnam ex, beatae enim sequi facilis, voluptates totam reprehenderit eligendi in aliquam assumenda. Velit minima fugiat consequuntur!
+                            Dengan layar besar dan kualitas suara canggih, setiap detik film menjadi pengalaman
+                            yang hidup dan tak terlupakan.
                         </p>
                     </Col>
                 </Row>
 
-                {/* Akhir Tambahan Card */}
-                
+                <Row className="mt-5">
+                    <Col md={7}>
+                        <h3>Film terbaik, kenyamanan terbaik.</h3>
+                        <p className="lead">
+                            Kursi empuk, ruang teater luas, dan suasana eksklusif
+                            memastikan Anda menikmati film dengan maksimal.
+                        </p>
+                    </Col>
+                    <Col md={5}>
+                        <img
+                            src={imgCinema2}
+                            className="img-fluid mx-auto rounded shadow"
+                            alt="Cinema Seats"
+                        />
+                    </Col>
+                </Row>
+
+                {/* Tambahan Card 2 */}
+                <Row className="mt-5 mb-5" />
+                <Row className="mt-5">
+                    <Col md={5}>
+                        <img
+                            src={imgCinema3}
+                            className="img-fluid mx-auto rounded shadow"
+                            alt="Movie Poster"
+                        />
+                    </Col>
+                    <Col md={7}>
+                        <h3>Pilihan film terlengkap untuk semua genre.</h3>
+                        <p className="lead">
+                            Dari action, romance, horror, hingga anime. Pilih film favoritmu dan nikmati tanpa batas.
+                        </p>
+                    </Col>
+                </Row>
+
+                <Row className="mt-5">
+                    <Col md={7}>
+                        <h3>Promo menarik setiap minggu!</h3>
+                        <p className="lead">
+                            Dapatkan diskon tiket, paket popcorn, dan penawaran eksklusif lainnya
+                            hanya di bioskop kami.
+                        </p>
+                    </Col>
+                    <Col md={5}>
+                        <img
+                            src={imgCinema2}
+                            className="img-fluid mx-auto rounded shadow"
+                            alt="Cinema Promo"
+                        />
+                    </Col>
+                </Row>
+
                 <Row className="mt-5 mb-5" />
             </Container>
         </>
     );
 };
 
-export default FilmPage;
+export default HomePage;
